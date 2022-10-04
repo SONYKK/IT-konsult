@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Александр Васенев">
+    <meta name="deskription" content="Продажа серверного оборудования">
+    <meta name="keywords" content="server, HDD, сервер">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="px-3 py-2 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="/ctatic/img/1.png"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <li>
+            <a href="/home" class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"></use></svg>
+              Главная страница
+            </a>
+          </li>
+          <li>
+            <a href="/store" class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="/store"></use></svg>
+              Магазин
+            </a>
+          </li>
+          <li>
+            <a href="/create_product" class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"></use></svg>
+              Добавить запись
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
+              Скачать прайс
+            </a>
+          </li>
+          <li>
+            <a href="/about" class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+    <header>
+      <div class="container">
+        <header class="d-flex flex-wrap justify-content-center p-0 mb-1">
+          <a href="/" class="d-flex align-items-center mb-2 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <img src="/static/img/2.png" width="120" height='80'>
+          <!--- <span class="fs-4">IT Консалт</span> -->  
+          </a>
+    
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item border-0"><h5>График работы</h5><br><h6>пн-пт с 9:00 до 19:00</h6></li>
+            <li class="list-group-item border-0"><h5>Заказы через сайт</h5><br><h6>круглосуточно</h6></li>
+            <li class="list-group-item border-0"><h5>Написать</h5><br><h6>example@example.ru</h6></li>
+            <li class="list-group-item border-0"><h5>Обратный звонок</h5><br><h6>+00000000000</h6></li>
+          </ul>
+        </header>
+      </div>
+
+        
+        <div class="px-3 py-2 border-bottom mb-1 text-bg-dark">
+          <div class="container d-flex flex-wrap justify-content-center">
+            <form class="w-75 me-5" role="search">
+              <input type="search" class="form-control" placeholder="Название товара" aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-light text-dark me-3">Войти</button>
+              <button type="button" class="btn btn-primary">Регистрация</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+
+      <div class="container">{% block body %}{% endblock %}
+
+      </div>
+    
+
+
+        <footer class="container d-flex flex-wrap py-3 my-3 border-top">
+          <div class="col mb-5">
+            <img width="120" height="80" src="/static/img/2.png" alt="Logo">
+            </a>
+            <p class="text-muted p-2">© 2022</p>
+          </div>
+
+      
+          <div class="col mb-3">
+            <h5>О компании</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">О нас</a></li>
+              <li class="nav-item mb-2"><a href="/news" class="nav-link p-0 text-muted">Новости</a></li>
+              <li class="nav-item mb-2"><a href="/sale" class="nav-link p-0 text-muted">Акции</a></li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3">
+            <h5>Доставка и оплата</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="/delivery" class="nav-link p-0 text-muted">Доставка и оплата</a></li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3">
+            <h5>Гарантия</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Сервис</a></li>
+            </ul>
+          </div>
+
+          <div class="col mb-3">
+            <h5>Контакты</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">example@email.com</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">+7 000 000 00 00</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">125130, Москва, 
+                ул. Клары Цеткин, д.29, к.1</a></li>
+            </ul>
+          </div>
+        </footer>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="sidebars.js"></script>
+</body>
+</html>

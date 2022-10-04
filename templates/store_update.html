@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Обновить информацию о товаре
+{% endblock %}
+
+{% block body %}
+<h1>
+    Обновить информацию о товаре
+</h1>
+
+<form method="post">
+    <input type="text" name="product_name" id="product_name" class="form-control" value="{{ product.product_name }}" placeholder="Введите название товара (до 150 символов)"><br>
+    <input type="text" name="price" id="price" class="form-control" value="{{ product.price }}" placeholder="Введите цену товара"><br>
+    <input type="text" name="product_category" id="product_category" class="form-control" value="{{ product.product_category }}" placeholder="Введите категорию товара"><br>
+    <textarea name="product_description" id="product_description" class="form-control" placeholder="Введите описание товара">{{ product.product_description }}</textarea><br>
+    <input type="submit"  class="btn btn-success" value="Обновить"><br>
+</form>
+
+{% endblock %}
