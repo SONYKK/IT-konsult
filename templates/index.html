@@ -6,65 +6,148 @@
 
 {% block body %}
 <noscript>Для корректной работы сайта необходима поддержка JavaScript.</noscript>
-<aside>
-    <div class="flex-shrink-0 p-0 bg-white" style="width: 18%; float: left;">
-        <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-          <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-          <span class="fs-5 fw-semibold">Интернет-магазин</span>
-        </a>
-        <ul class="list-unstyled ps-0">
-          <li class="mb-1">
-            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-              Серверы
-            </button>
-            <div class="collapse show" id="home-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Серверные платформы</a></li>
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Комплектующие</a></li>
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Системы хранения</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
-              Сетевое оборудование
-            </button>
-            <div class="collapse show" id="dashboard-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Системы безопасности</a></li>
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Беспроводное оборудование</a></li>
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Антенны</a></li>
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Коммутаторы</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="true">
-              Програмное обеспечение
-            </button>
-            <div class="collapse show" id="orders-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Лицензии доступа</a></li>
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Операционные системы</a></li>
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Офисные пакеты</a></li>
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Прочее</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="border-top my-3"></li>
-          <li class="mb-1">
-            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="true">
-              Расширенный сервис
-            </button>
-            <div class="collapse show" id="account-collapse" >
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Гарантия</a></li>
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Сервис</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
+
+<aside class="container">
+  <div class="flex-shrink-0 p-0 bg-white" style="width: 18%; float: left;">
+      <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+        <!-- <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg> -->
+        <span class="fs-5 fw-semibold">Каталог</span>
+      </a>
+      <ul class="list-unstyled ps-0" id="menu">
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            Серверы
+          </button>
+          <div class="collapse" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">DELL Technologies</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">HPE (Hewlett Packard Enterprise)</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">IBM</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Page</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">LENOVO</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Supermicro</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            Серверные платформы
+          </button>
+          <div class="collapse" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">DELL Technologies</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">HPE (Hewlett Packard Enterprise)</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">IBM</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Supermicro</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            Системы хранения
+          </button>
+          <div class="collapse" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">DELL Technologies</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">HPE (Hewlett Packard Enterprise)</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">IBM</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Supermicro</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            Комплектующие
+          </button>
+          <div class="collapse" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Процессоры</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Оперативная память</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Жесткие диски и SSD</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Материнские платы для серверов</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Контроллеры RAID</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            IP-телефония
+          </button>
+          <div class="collapse" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">AVAYA</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">TADIRAN</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">YEALINK</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            Коммутаторы
+          </button>
+          <div class="collapse" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Brocade/Ruckus</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Cisco</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">HPE (Hewlett Packard Enterprise)</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Juniper</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Huawei</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            Маршрутизаторы
+          </button>
+          <div class="collapse" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Cisco</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Huawei</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Juniper</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">HPE (Hewlett Packard Enterprise)</a></li> 
+            </ul>
+          </div>
+        </li>
+        <!-- <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
+            Сетевое оборудование
+          </button>
+          <div class="collapse show" id="dashboard-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Системы безопасности</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Беспроводное оборудование</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Антенны</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Коммутаторы</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="true">
+            Програмное обеспечение
+          </button>
+          <div class="collapse show" id="orders-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Лицензии доступа</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Операционные системы</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Офисные пакеты</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Прочее</a></li>
+            </ul>
+          </div>
+        </li> -->
+        <li class="border-top my-3"></li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="true">
+            Расширенный сервис, гарантия
+          </button>
+          <!-- <div class="collapse show" id="account-collapse" >
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Гарантия</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Сервис</a></li>
+            </ul>
+          </div> -->
+        </li>
+      </ul>
+    </div>
 </aside>
 
         <div class="container text-center my-5">
@@ -142,4 +225,17 @@
 
 
     <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#menu").dcAccordion({
+          classExpand: "cid9313",
+          menuClose: false,
+          autoClose: true,
+          saveState: false,
+          disableLink: true,
+          autoExpand: true,
+        });
+      });
+    </script>
 {% endblock %}

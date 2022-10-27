@@ -5,15 +5,7 @@
 {% endblock %}
 
 {% block body %}
-<!-- <div class="container m-5">
-    <h1>Серверное оборудование</h1><br>
 
-
-
-    <p>Название: {{ product.product_name }}<p>
-    <p>Категория:{{ product.product_category }}<p>
-    <p>Цена: {{ product.price }}<p>
-    <a href="/store/{{ product.id }}" class="btn btn-warning">Детальнее</a>     -->
 
 <table class="table table-striped text-center">
     <thead>
@@ -23,20 +15,18 @@
         <th scope="col">Цена</th>
         <th scope="col"></th>
       </tr>
-    </thead>    {% for product in products %}
+    </thead>    
     <tbody>
-      <tr>
+      <tr>{% for product in products %}
         <td>{{ product.product_category }}</td>
         <td>{{ product.product_name }}</td>
         <td>{{ product.price }}</td>
         <td><a href="/store/{{ product.id }}" class="btn btn-warning">Детальнее</a></td>
       </tr>
-
+        {% endfor %}
     </tbody>
   </table>
-    {% endfor %}
 
-</div>
 
 
 
