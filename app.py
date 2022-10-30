@@ -33,6 +33,7 @@ class Product(db.Model):
     product_description = db.Column(db.Text, nullable=False)
     price = db.Column(db.String(100), default='По запросу')
     product_category = db.Column(db.String(150))
+    creator = db.Column(db.String(100))
 
     def __repr__(self):
         return f'<Product {self.id}>'
@@ -94,6 +95,25 @@ def sale():
     return render_template('sale.html')
 
 
+@app.route('/servis')
+def servis():
+    return render_template('servis.html')
+
+
+@app.route('/katalog/<string:category>/<string:creator>')
+def katalog(category, creator):
+    pr = db.session.query(Product).filter(
+  (Product.product_category == category) & (Product.creator == creator)).all()
+    return render_template('katalog.html', pr=pr,category=category, creator=creator)
+
+
+@app.route('/katalog/<string:category>')
+def katalog1(category):
+    pr = db.session.query(Product).filter(
+  (Product.product_category == category)).all()
+    return render_template('katalog.html', pr=pr,category=category)
+
+
 @app.route('/listusers')
 def listusers_admin():
     profiles = db.session.query(Profiles).all()
@@ -110,13 +130,7 @@ def listusers_admin():
 @app.route('/listgoods')
 def listgoods_admin():
     products = db.session.query(Product).all()
-    for i in range(len(products)):
-        product_name = Product.query.order_by(Product.id).all()[i].product_name 
-        product_description = Product.query.order_by(Product.id).all()[i].product_description
-        price = Product.query.order_by(Product.id).all()[i].price
-        product_category = Product.query.order_by(Product.id).all()[i].product_category
-    return render_template('/listgoods.html', product_name=product_name, 
-    product_category=product_category, price=price, product_description=product_description, products=products)
+    return render_template('/listgoods.html', products=products)
 
 
 @app.route('/store')
@@ -158,8 +172,9 @@ def create_product():
         product_description = request.form['product_description']
         price = request.form['price']
         product_category = request.form['product_category']
+        creator = request.form['creator']
         product = Product(product_name=product_name, product_description=product_description, price=price,
-                          product_category=product_category)
+                          product_category=product_category, creator=creator)
 #        try:
         db.session.add(product)
         db.session.commit()
@@ -179,6 +194,7 @@ def store_update(id):
         product.product_description = request.form['product_description']
         product.price = request.form['price']
         product.product_category = request.form['product_category']
+        product.creator = request.form['creator']
         db.session.commit()
         return redirect('/admin/store')
     else:

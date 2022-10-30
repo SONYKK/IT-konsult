@@ -10,10 +10,10 @@
 
             <li>
                 
-                <p>Название: {{ product_name }}<p>
-                <p>Категория:{{ product_category }}<p>
-                <p>Цена: {{ price }}<p>
-                <p>Описание: {{ product_description }}<p>
+                <p>Название: {{ product.product_name }}<p>
+                <p>Категория:{{ product.product_category }}<p>
+                <p>Цена: {{ product.price }}<p>
+                <p>Описание: {{ product.product_description }}<p>
                 <a href="/store/{{ product.id }}" class="btn btn-warning">Детальнее</a>    
                 <a href="/store/{{ product.id }}/delete" class="btn btn-danger">Удалить запись</a>    
                 <a href="/store/{{ product.id }}/update" class="btn btn-success">Редактировать запись</a>    

@@ -1,20 +1,62 @@
-{% extends 'base.html' %}
-
-{% block title %}
-Добавление товара
-{% endblock %}
-
-{% block body %}
-<h1>
-    Добавить товар
-</h1>
+{% extends 'base.html' %} {% block title %} Добавление товара {% endblock %} {%
+block body %}
+<h1>Добавить товар</h1>
 
 <form method="post">
-    <input type="text" name="product_name" id="product_name" class="form-control" placeholder="Введите название товара (до 150 символов)"><br>
-    <input type="text" name="price" id="price" class="form-control" placeholder="Введите цену товара"><br>
-    <input type="text" name="product_category" id="product_category" class="form-control" placeholder="Введите категорию товара"><br>
-    <textarea name="product_description" id="product_description" class="form-control" placeholder="Введите описание товара"></textarea><br>
-    <input type="submit"  class="btn btn-success" value="Отправить"><br>
-</form>
+  <input
+    type="text"
+    name="product_name"
+    id="product_name"
+    class="form-control"
+    placeholder="Введите название товара (до 150 символов)"
+  />
+  <br />
+  <input
+    type="text"
+    name="price"
+    id="price"
+    class="form-control"
+    placeholder="Введите цену товара"
+  />
+  <br />
+  <input
+    type="text"
+    name="product_category"
+    id="product_category"
+    class="form-control"
+    placeholder="Введите категорию товара"
+  />
+  <br />
+  <textarea
+    name="product_description"
+    id="product_description"
+    class="form-control"
+    placeholder="Введите описание товара"
+  ></textarea>
+  <br />
+  <input
+    type="text"
+    name="creator"
+    id="creator"
+    class="form-control"
+    placeholder="Введите производитель товара (до 100 символов)"
+  />
+  <br />
+  <input
+    type="submit"
+    class="btn btn-success"
+    value="Отправить"
+  />
+  <br />
+  <!-- <select name="select2">
+  <option selected="selected">Выберите героя</option>
+  <option>Чебурашка</option>
+  <option>Крокодил Гена</option>
+  <option>Шапокляк</option>
+  <option>Крыса Лариса</option>
+</select>
+</form> -->
 
 {% endblock %}
+
+

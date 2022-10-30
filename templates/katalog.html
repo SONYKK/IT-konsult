@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ pr.product_name }}
+{% endblock %}
+
+{% block body %}
+
+
+<table class="table table-striped text-center">
+    <thead>
+      <tr>
+        <th scope="col">Категория</th>
+        <th scope="col">Наименование</th>
+        <th scope="col">Цена</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>    
+    <tbody>
+      <tr>{% for product in pr %}
+        <td>{{ product.product_category }}</td>
+        <td>{{ product.product_name }}</td>
+        <td>{{ product.price }}</td>
+        <td><a href="/store/{{ product.id }}" class="btn btn-warning">Детальнее</a></td>
+      </tr>
+        {% endfor %}
+    </tbody>
+    {{ category, creator }}
+  </table>
+
+
+
+
+
+{% endblock %}
