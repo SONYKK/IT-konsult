@@ -19,13 +19,27 @@ block body %}
     placeholder="Введите цену товара"
   />
   <br />
-  <input
+  <!-- <input
     type="text"
     name="product_category"
     id="product_category"
     class="form-control"
     placeholder="Введите категорию товара"
-  />
+  /> -->
+  <select name="product_category" id="product_category" class="form-control">
+    <option selected="selected">Выберите категорию</option>
+    <option>server</option>
+    <option>platform</option>
+    <option>storage</option>
+    <option>IP</option>
+    <option>kommutator</option>
+    <option>router</option>
+    <option>processor</option>
+    <option>operativ-memory</option>
+    <option>HDD-SSD</option>
+    <option>motherboard</option>
+    <option>RAID</option>
+  </select>
   <br />
   <textarea
     name="product_description"
@@ -34,13 +48,29 @@ block body %}
     placeholder="Введите описание товара"
   ></textarea>
   <br />
-  <input
+  <!-- <input
     type="text"
     name="creator"
     id="creator"
     class="form-control"
     placeholder="Введите производитель товара (до 100 символов)"
-  />
+  /> -->
+  <select name="creator" id="creator" class="form-control">
+    <option selected="selected">Выберите производителя</option>
+    <option>Dell</option>
+    <option>HP</option>
+    <option>IBM</option>
+    <option>Page</option>
+    <option>Lenovo</option>
+    <option>Supermicro</option>
+    <option>AVAYA</option>
+    <option>TADIRAN</option>
+    <option>YEALINK</option>
+    <option>Brocade</option>
+    <option>Cisco</option>
+    <option>Juniper</option>
+    <option>Huawei</option>
+  </select>
   <br />
   <input
     type="submit"
@@ -48,14 +78,7 @@ block body %}
     value="Отправить"
   />
   <br />
-  <!-- <select name="select2">
-  <option selected="selected">Выберите героя</option>
-  <option>Чебурашка</option>
-  <option>Крокодил Гена</option>
-  <option>Шапокляк</option>
-  <option>Крыса Лариса</option>
-</select>
-</form> -->
+</form>
 
 {% endblock %}
 
